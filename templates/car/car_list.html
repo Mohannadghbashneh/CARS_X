@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+
+{% block title %}Cars List{% endblock title %}
+{% block content %}
+<h1>Cars List</h1>
+
+{% for car  in object_list %}
+<div class="card" id="project-3" >
+        <img src="{{car.img_url}}" alt="{{car.title}}"  height="200" width="250px" />
+        <h3>{{car.car}}</h3>
+        <a href="{% url 'car_detail' car.id%}">Detail</a>
+        <a href="{% url 'car_update' car.id%}" id="update_list">Change</a>
+        <a href="{% url 'car_delete' car.id%}" id="delete_list">Remove</a>
+      </div>
+    
+{% endfor%}
+<div class="card" id="project-3">
+<a href="{% url 'car_create'%}">Add Car</a>
+</div>
+{% endblock content %}

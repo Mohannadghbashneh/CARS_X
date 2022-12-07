@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+{% block title %}Remove Car{% endblock title %}
+{% block content %}
+<h1>Remove Car</h1>
+
+<form method="post" class="uniForm">
+  {% csrf_token %}
+  <p>Do you want to Remove "{{ car.car }}" from list ?</p>
+  <input type="submit" value="Remove" id=delete_list>
+</form>
+{% endblock content %}
