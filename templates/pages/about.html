@@ -1,7 +1,10 @@
 {% extends '_base.html' %}
+{% load static %}
 
-{% block title %}About page{% endblock %}
+{% block title %}About page{% endblock title %}
 
 {% block content %}
-<h1>About page</h1>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <img src="{% static 'images/cars.png' %}" id="img-car" alt="DjangoX logo"/>
+</div>
 {% endblock content %}
